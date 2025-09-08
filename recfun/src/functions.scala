@@ -22,4 +22,15 @@ object Main {
     }
     count(chars, 0)
   }
+
+    //countChange function
+  def countChange(money: Int, coins: List[Int]): Int = {
+    if (money == 0) {
+      1
+    } else if (money < 0 || coins.isEmpty) {
+      0
+    } else {
+      countChange(money - coins.head, coins) + countChange(money, coins.tail)
+    }
+  }
 }
