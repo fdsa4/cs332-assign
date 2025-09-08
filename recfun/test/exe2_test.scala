@@ -1,4 +1,5 @@
 object Main {
+    //balance function
   def balance(chars: List[Char]): Boolean = {
     def count(chars: List[Char], open: Int): Boolean = {
       if (chars.isEmpty) {
@@ -16,8 +17,11 @@ object Main {
     count(chars, 0)
   }
 
+  //output test
   def main(args: Array[String]): Unit = {
-    val input = scala.io.StdIn.readLine()
-    println(balance(input.toList))
+    println("balance(\"(()(()))\") = " + balance("(()(()))".toList))
+    println("balance(\"(()())\") = " + balance("(()())".toList))
+    println("balance(\":-)\") = " + balance(":-)".toList))
+    println("balance(\"())(\") = " + balance("())(".toList))
   }
 }

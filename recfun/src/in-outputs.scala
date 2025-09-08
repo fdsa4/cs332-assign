@@ -1,5 +1,6 @@
 object Main {
     def main(args: Array[String]): Unit = {
+        //In naver blog
         //string
         import scala.io.StdIn
 
